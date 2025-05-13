@@ -247,13 +247,16 @@ const ContactUs = () => {
             )}
           </motion.div>
           <motion.div 
-            initial={{ opacity: 0, y: 150 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-          className='w-full flex md:justify-start justify-center'>
+          className='w-full flex md:justify-start justify-center '>
 
         <Button buttoType='submit'  buttonText={"Send Message"} buttonStyles={"lg:text-xl md:text-md  lg:px-6 lg:py-3 md:px-4 md:py-2.5 px-3 py-2 rounded-lg cursor-pointer bg-buttonLight text-buttonLightText dark:text-buttonDarkText dark:bg-buttonDark"}/>
+
           </motion.div>
+        
+        
         </motion.form>
       </div>
     </section>
