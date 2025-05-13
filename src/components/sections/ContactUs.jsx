@@ -76,13 +76,18 @@ const ContactUs = () => {
 
         {/* Form Section */}
         <motion.form 
-        initial={{ opacity: 0, x: 150 }}
+        initial={{ opacity: 0, x: -150 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
           onSubmit={handleSubmit}
           className='w-full md:w-1/2 lg:space-y-9 md:space-y-6 space-y-8 bg-glass-bgLight dark:bg-glass-bgDark border-glass-bgLight dark:border-glass-borderDark border rounded-xl p-6 md:p-8 lg:p-10 shadow-shadowLight dark:shadow-shadowDark'
         >
           {/* Name Input */}
+          <motion.div
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}  
+            transition={{ duration: 0.5 }}>
+
           <Input
             label="Full Name *"
             inputType="text"
@@ -90,9 +95,14 @@ const ContactUs = () => {
             value={formData.name}
             onChange={handleChange}
             errorText={errors.name}
-          />
+            />
+            </motion.div>
 
           {/* Email Input */}
+          <motion.div
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}  
+            transition={{ duration: 0.5 }}>
           <Input
             label="Email Address *"
             inputType="email"
@@ -100,19 +110,30 @@ const ContactUs = () => {
             value={formData.email}
             onChange={handleChange}
             errorText={errors.email}
-          />
+            />
+            </motion.div>
 
           {/* Company Input */}
+          <motion.div
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}  
+            transition={{ duration: 0.5 }}>
+
           <Input
             label="Company Name"
             inputType="text"
             name="company"
             value={formData.company}
             onChange={handleChange}
-          />
+            />
+        </motion.div>
 
           {/* License Type Dropdown */}
-          <div className="w-full  text-textLight-primary dark:text-textDark-primary bg-transparent  ">
+          <motion.div 
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}  
+            transition={{ duration: 0.5 }}
+          className="w-full  text-textLight-primary dark:text-textDark-primary bg-transparent  ">
             <div className="relative">
               <select
                 name="license"
@@ -166,10 +187,14 @@ const ContactUs = () => {
                 {errors.license}
               </span>
             )}
-          </div>
+          </motion.div>
 
           {/* Message Textarea */}
-          <div className="w-full">
+          <motion.div 
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          className="w-full">
             <div className="relative">
               <textarea
                 name="message"
@@ -220,11 +245,15 @@ const ContactUs = () => {
                 {errors.message}
               </span>
             )}
-          </div>
-          <div className='w-full flex md:justify-start justify-center'>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          className='w-full flex md:justify-start justify-center'>
 
         <Button buttoType='submit'  buttonText={"Send Message"} buttonStyles={"lg:text-xl md:text-md  lg:px-6 lg:py-3 md:px-4 md:py-2.5 px-3 py-2 rounded-lg cursor-pointer bg-buttonLight text-buttonLightText dark:text-buttonDarkText dark:bg-buttonDark"}/>
-          </div>
+          </motion.div>
         </motion.form>
       </div>
     </section>
