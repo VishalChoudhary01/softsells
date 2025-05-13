@@ -1,7 +1,6 @@
 import React from 'react';
 import {navMenu} from '../../constants/data';
 import { motion, AnimatePresence } from 'motion/react';
-import {Link} from 'react-router';
 import ThemeToggle from '../ui/Toggle/Toggle';
 const Sidebar = ({ Open, menuToggle }) => {
   return (

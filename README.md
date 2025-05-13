@@ -25,15 +25,15 @@ This project is a React application bootstrapped with Vite, designed to provide 
 
 ## Technologies Used
 
-React – JavaScript library for building user interfaces
-Vite – Fast frontend build tool
-ESLint – Linting utility for JavaScript and JSX
-Babel or SWC – JavaScript/JSX transpilers (depending on plugin)
-Node.js – JavaScript runtime environment
-npm or yarn – Package managers
-redux toolkit – state management  for React (used as Theme switcher)
-react-icons – Popular icon library for React
-Framer Motion – Animation library for React (used as motion/react)
+1. React – JavaScript library for building user interfaces
+2. Vite – Fast frontend build tool
+3. ESLint – Linting utility for JavaScript and JSX
+4. Babel or SWC – JavaScript/JSX transpilers (depending on plugin)
+5. Node.js – JavaScript runtime environment
+6. npm or yarn – Package managers
+7. redux toolkit – state management  for React (used as Theme switcher)
+8. react-icons – Popular icon library for React
+9. Framer Motion – Animation library for React (used as motion/react)
 ## Getting Started
 
 Follow these steps to run the project locally after cloning:

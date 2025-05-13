@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import ThemeToggle from '../ui/Toggle/Toggle';
-import { Link } from 'react-router';
 import Logo from '../ui/Logo';
 import {navMenu} from '../../constants/data'
 import { GiHamburgerMenu } from "react-icons/gi";
