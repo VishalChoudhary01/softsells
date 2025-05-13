@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaBuilding, FaList, FaComment } from 'react-icons/fa';
 import { FaChevronDown } from "react-icons/fa";
 import Input from '../ui/Input';
-import Contact from '../../../public/contact.jpg'
+import Contact from '/contact.jpg'
 import Button from '../ui/Button/Button';
+import {motion} from 'motion/react'
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -52,22 +52,33 @@ const ContactUs = () => {
 
   return (
     <section id="contact" className='flex flex-col w-full items-center py-12 lg:py-16 px-4 sm:px-6 lg:px-8 transition-colors'>
-      <h3 className='w-full max-w-7xl text-textLight-primary dark:text-textDark-primary after:bg-textLight-disabled after:dark:bg-textDark-disabled text-center lg:text-4xl md:text-3xl text-2xl font-roboto-slab font-medium relative after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-1 after:animate-underlinePluse'>
+      <motion.h3
+      initial={{ opacity: 0, y: -150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+       className='w-full max-w-7xl text-textLight-primary dark:text-textDark-primary after:bg-textLight-disabled after:dark:bg-textDark-disabled text-center lg:text-4xl md:text-3xl text-2xl font-roboto-slab font-medium relative after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-1 after:animate-underlinePluse'>
         Get In Touch
-      </h3>
+      </motion.h3>
 
       <div className='w-full max-w-7xl flex flex-col md:flex-row justify-center gap-8 lg:my-16 md:my-12 my-8'>
         {/* Image Section */}
-        <article className='md:w-1/2 hidden md:block rounded-xl overflow-hidden shadow-shadowLight dark:shadow-shadowDark'>
+        <motion.article
+        initial={{ opacity: 0, x: -150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+         className='md:w-1/2 hidden md:block rounded-xl overflow-hidden shadow-shadowLight dark:shadow-shadowDark'>
           <img 
             src={Contact} 
             alt="Contact us" 
             className='w-full h-full object-cover'
           />
-        </article>
+        </motion.article>
 
         {/* Form Section */}
-        <form 
+        <motion.form 
+        initial={{ opacity: 0, x: 150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
           onSubmit={handleSubmit}
           className='w-full md:w-1/2 lg:space-y-9 md:space-y-6 space-y-8 bg-glass-bgLight dark:bg-glass-bgDark border-glass-bgLight dark:border-glass-borderDark border rounded-xl p-6 md:p-8 lg:p-10 shadow-shadowLight dark:shadow-shadowDark'
         >
@@ -214,7 +225,7 @@ const ContactUs = () => {
 
         <Button buttoType='submit'  buttonText={"Send Message"} buttonStyles={"lg:text-xl md:text-md  lg:px-6 lg:py-3 md:px-4 md:py-2.5 px-3 py-2 rounded-lg cursor-pointer bg-buttonLight text-buttonLightText dark:text-buttonDarkText dark:bg-buttonDark"}/>
           </div>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

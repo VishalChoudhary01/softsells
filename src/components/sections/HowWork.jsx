@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUpload, FaBalanceScale, FaMoneyCheckAlt } from 'react-icons/fa';
+import {motion} from 'motion/react'
 
 const HowWork = () => {
   const steps = [
@@ -22,7 +23,11 @@ const HowWork = () => {
 
   return (
     <section className="py-12 px-4 md:py-16 lg:py-20">
-        <h3 className='w-full text-textLight-primary dark:text-textDark-primary after:bg-textLight-disabled after:dark:bg-textDark-disabled text-center lg:text-4xl md:text-3xl text-2xl font-roboto-slab font-medium relative after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1  after:h-1  after:animate-underlinePluse'>How It Works</h3>
+        <motion.h3
+        initial={{ opacity: 0, y: -150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+         className='w-full text-textLight-primary dark:text-textDark-primary after:bg-textLight-disabled after:dark:bg-textDark-disabled text-center lg:text-4xl md:text-3xl text-2xl font-roboto-slab font-medium relative after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1  after:h-1  after:animate-underlinePluse'>How It Works</motion.h3>
       <div className="max-w-7xl mx-auto lg:my-16 md:my-12 my-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
           {steps.map((step, index) => (
