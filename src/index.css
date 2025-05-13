@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Light Theme */
+  --color-bgLight: #FBF8F1;
+  --color-bgLight-secondary: #F7ECDE;
+  --color-bgLight-tertiary: #E9DAC1;
+  --color-surfaceLight: #FFFFFF;
+  --color-headerLight: #F7ECDE;
+
+  --color-textLight-primary: #0F3D3E;
+  --color-textLight-secondary: #0F3D3EB3;
+  --color-textLight-disabled: #0F3D3E80;
+  --color-textLight-inverted: #FBF8F1;
+
+  --color-primaryLight: #54BAB9;
+  --color-primaryLight-hover: #3B8C8A;
+  --color-secondaryLight: #E9DAC1;
+  --color-secondaryLight-hover: #D4C2A7;
+
+  --color-errorLight: #FF4444;
+  --color-successLight: #00C851;
+  --color-warningLight: #FFBB33;
+  --color-infoLight: #33B5E5;
+
+  --color-borderLight: #E9DAC1;
+  --color-borderLight-hover: #D4C2A7;
+  --color-shadowLight: #0F3D3E1A;
+  --color-overlayLight: #FBF8F1CC;
+
+  --color-buttonLight: #02150fe3;
+  --color-buttonLight2: #013e2bd1;
+  --color-buttonLightText: #FBF8F1;
+  --color-buttonLight-hover: #3B8C8A;
+  --color-buttonLight-disabled-bg: #E9DAC1;
+  --color-buttonLight-disabled-text: #0F3D3E80;
+
+  --color-inputLight-bg: #FFFFFF;
+  --color-inputLight-border: #E9DAC1;
+  --color-inputLight-focus: #54BAB9;
+  --color-inputLight-placeholder: #0F3D3EB3;
+
+  
+
+  --color-linkLight: #54BAB9;
+  --color-linkLight-hover: #3B8C8A;
+  /* toogle */
+  --color-lightToggleIcon:#22362fd3;
+
+  /* Glassmorphism */
+  --color-glass-bgLight: rgba(248, 240, 193, 0.134); 
+  --color-glass-borderLight: rgba(225, 210, 129, 0.2);
+
+
+  /* Dark Theme */
+  --color-bgDark: #100F0F;
+  --color-darkNavbar:#222;
+  --color-bgDark-secondary: #0F3D3E;
+  --color-bgDark-tertiary: #1A1A1A;
+  --color-surfaceDark: #1A1A1A;
+  --color-headerDark: #0F3D3E;
+
+  --color-textDark-primary: #ebfaf7b3;
+  --color-textDark-secondary: #F1F1F1B3;
+  --color-textDark-disabled: #F1F1F180;
+  --color-textDark-inverted: #100F0F;
+
+  --color-primaryDark: #54BAB9;
+  --color-primaryDark-hover: #6CD1D0;
+  --color-secondaryDark: #0F3D3E;
+  --color-secondaryDark-hover: #1A4F50;
+
+  --color-errorDark: #FF6666;
+  --color-successDark: #4CAF50;
+  --color-warningDark: #FFC107;
+  --color-infoDark: #29B6F6;
+
+  --color-borderDark: #0F3D3E;
+  --color-borderDark-hover: #1A4F50;
+  --color-shadowDark: #0000004D;
+  --color-overlayDark: #100F0FCC;
+
+  --color-buttonDark: #02716f;
+  --color-buttonDarkText: #c1e7f0ca;
+  --color-buttonDark-hover: #6CD1D0;
+  --color-buttonDark-disabled-bg: #0F3D3E;
+  --color-buttonDark-disabled-text: #F1F1F180;
+
+  --color-inputDark-bg: #1A1A1A;
+  --color-inputDark-border: #0F3D3E;
+  --color-inputDark-focus: #54BAB9;
+  --color-inputDark-placeholder: #F1F1F1B3;
+
+  --color-cardDark-bg: #1A1A1A;
+  --color-cardDark-shadow: #0000004D;
+  --color-linkDark: #54BAB9;
+  --color-linkDark-hover: #6CD1D0;
+  /* toogle */
+  --color-DarkToggleIcon:#97eeebd5;
+
+   /* Glassmorphism  */
+  --color-glass-bgDark: rgba(234, 246, 247, 0.04); 
+  --color-glass-borderDark: rgba(255, 255, 255, 0.15);
+
+  /* fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-roboto-slab: "Roboto Slab", serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
+
+  /* animation */
+  --animate-underlinePluse: underlinePluse 10s ease-in-out infinite;
+  @keyframes underlinePluse {
+    0%,
+    100% {
+      width: 90%;
+    }
+    50% {
+      width: 0.1%; 
+    }
+  }
+
+  --animate-infinite-scroll: infiniteScroll 10s linear infinite;
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+}
+
+  
+
+
+.floating-icon {
+  position: absolute;
+  opacity: 0.06;
+  font-size: 4rem;
+  filter: blur(1px);
+  pointer-events: none;
+}

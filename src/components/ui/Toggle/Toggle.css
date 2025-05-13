@@ -1,0 +1,29 @@
+@keyframes sun-spin {
+  0% { 
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 4px var(--color-primaryLight));
+  }
+  100% { 
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 8px var(--color-primaryLight));
+  }
+}
+
+@keyframes moon-float {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 4px var(--color-primaryDark));
+  }
+  50% {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 6px var(--color-primaryDark));
+  }
+}
+
+.sun-spin {
+  animation: sun-spin 8s linear infinite;
+}
+
+.moon-float {
+  animation: moon-float 3s ease-in-out infinite;
+}
