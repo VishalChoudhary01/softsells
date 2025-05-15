@@ -59,7 +59,7 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       className='lg:text-[3rem] md:text-[2.5rem] text-3xl text-textLight-primary dark:text-textDark-primary 
-        hover:scale-105 transition-all cursor-zoom-in text-shadow-shadowLight text-shadow-lg md:tracking-wider 
+        hover:scale-105 transition-all cursor-zoom-in text-shadow-shadowLight dark:text-shadow-teal-500/20 text-shadow-lg md:tracking-wider 
         font-poppins font-semibold'>
         Turn Unused Software Licenses Into Cash
       </motion.h1>

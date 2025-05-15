@@ -68,7 +68,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 md:flex md:items-center md:justify-between">
           <div className="text-center dark:text-textDark-secondary text-textLight-secondary md:text-left text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} LicenseFlip. All rights reserved.
+            © {new Date().getFullYear()} Soft Sells. All rights reserved.
           </div>
           
           <div className="flex justify-center space-x-6">
